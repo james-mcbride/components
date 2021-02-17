@@ -1,65 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import faker from "faker";
+import CommentDetail from "./CommentDetail"
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src="https://source.unsplash.com/random" />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            Today at 6:00PM
-                        </span>
-                    </div>
-                    <div className="text">
-                        Nice Blog Post!
-                    </div>
-                </div>
-            </div>
-        <div className="comment">
-            <a href="/" className="avatar">
-                <img alt="avatar" src="https://source.unsplash.com/random" />
-            </a>
-            <div className="content">
-                <a href="/" className="author">
-                    Sam
-                </a>
-                <div className="metadata">
-                        <span className="date">
-                            Today at 6:00PM
-                        </span>
-                </div>
-                <div className="text">
-                    Nice Blog Post!
-                </div>
-            </div>
+            <ApprovalCard>
+                <CommentDetail author ="Sam" timeAgo="today at 4:45PM" blog="Can't wait for lunch!" avatarSource="https://source.unsplash.com/random" />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author ="Alex" timeAgo="today at 2:00PM" blog="That game was nuts last night" avatarSource="https://source.unsplash.com/random"/>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author ="Jane" timeAgo="today at 12:45PM" blog="Patrick Mahomes is amazing" avatarSource="https://source.unsplash.com/random"/>
+            </ApprovalCard>
         </div>
-        <div className="comment">
-            <a href="/" className="avatar">
-                <img alt="avatar" src="https://source.unsplash.com/random" />
-            </a>
-            <div className="content">
-                <a href="/" className="author">
-                    Sam
-                </a>
-                <div className="metadata">
-                        <span className="date">
-                            Today at 6:00PM
-                        </span>
-                </div>
-                <div className="text">
-                    Nice Blog Post!
-                </div>
-            </div>
-        </div>
-    </div>
     )
 };
 
